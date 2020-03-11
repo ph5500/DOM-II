@@ -21,10 +21,11 @@
 // //animation
 // //analytics
 
+//1//
 window.addEventListener("load", function (happen) {
     alert("The page has loaded");
 });
-
+//2
 function newPicture() {
     document.getElementById('image_one').src = "/Users/philfives/LambdaSchoolWork/DOM-II/shreena-bindra-fHzvQFO-oQg-unsplash.jpg";
 }
@@ -32,14 +33,14 @@ function newPicture() {
 function oldPicture() {
     document.getElementById('image_one').src = "img/fun-bus.jpg";
 }
-
+//3
 const navStop = document.querySelector('nav');
 navStop.addEventListener('click', function (happen) {
     event.preventDefault();
     alert(`don't click that please`);
 })
 
-
+//4
 const btns = document.querySelector('#btn');
 btns.addEventListener('dblclick', function (happen) {
     happen.target.style.color = 'red'
@@ -50,8 +51,8 @@ button_two.addEventListener('dblclick', function (happen) {
     happen.target.style.color = 'blue'
 });
 
-const butto_three = document.querySelector('#button_tres');
-button_three.addEventListener('dblclick', function (happen) {
+const button_three = document.querySelector('#btn_tres');
+btn_tres.addEventListener('dblclick', function (happen) {
     happen.target.style.color = 'green'
 });
 
@@ -65,13 +66,25 @@ button_three.addEventListener('dblclick', function (happen) {
 //     event.target.style.opacity = '1';
 // });
 
-
+//5
 document.addEventListener('keydown', Yoo);
 
 function Yoo(e) {
-    log.textContent += ` ${e.code}`;
-}
+    log.textContent += ` ${e.code}`
+    function logKey(e) {
 
+    };
+}
+//6
+const div = document.getElementById('myDiv').style.resize = "both";
+// myDiv.style.addEventListener('resize' = 'vertical');
+//7
+const paragraph = document.querySelector('#p_one');
+paragraph.addEventListener('clone', function (happen) {
+    alert('clone this')
+});
+
+//8
 document.addEventListener('wheel', () => {
     // console.log('wheel housing')
     const wheels = window.wheelY;
