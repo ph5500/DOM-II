@@ -108,9 +108,9 @@ body.addEventListener("click", () => {
 });
 
 //12
-const removeImg = document.querySelector("#image_two");
-removeImg.addEventListener("click", (happen) => {
-    removeImg.style.visibility = "hidden";
+const remove = document.querySelector("#image_two");
+remove.addEventListener("click", (happen) => {
+    remove.style.visibility = "hidden";
 
     event.stopPropagation();
 })
