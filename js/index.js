@@ -56,16 +56,6 @@ btn_tres.addEventListener('dblclick', function (happen) {
     happen.target.style.color = 'green'
 });
 
-
-// const image_four = document.querySelector('#image_four');
-// image_four.addEventListener('mousedown', function (event) {
-//     event.target.style.opacity = '0';
-// });
-
-// image_four.addEventListener('mouseup', function (event) {
-//     event.target.style.opacity = '1';
-// });
-
 //5
 document.addEventListener('keydown', Yoo);
 
@@ -75,14 +65,25 @@ function Yoo(e) {
 
     };
 }
+
 //6
-const div = document.getElementById('myDiv').style.resize = "both";
-// myDiv.style.addEventListener('resize' = 'vertical');
+window.addEventListener('resize', (happen) => {
+    document.querySelectorAll('h2').forEach(el => {
+        el.style.fontSize = '30rem';
+        console.log('My headings are huugeee!');
+    })
+})
+
+
+
+
 //7
-const paragraph = document.querySelector('#p_one');
-paragraph.addEventListener('clone', function (happen) {
-    alert('clone this')
+const bodyText = document.querySelector(".text-content");
+bodyText.addEventListener("copy", () => {
+    bodyText.style.color = "white";
 });
+
+
 
 //8
 document.addEventListener('wheel', () => {
@@ -90,6 +91,30 @@ document.addEventListener('wheel', () => {
     const wheels = window.wheelY;
     console.log(wheels);
 });
+//9
+const test1 = document.querySelector(".destination h4");
+test1.addEventListener("mouseup", () => {
+    test1.style.color = "purple";
+});
+//10
+const test2 = document.querySelector(".destination p");
+test2.addEventListener("mousedown", () => {
+    test2.style.color = "orange";
+});
+//11
+const body = document.querySelector("body");
+body.addEventListener("click", () => {
+    body.style.backgroundColor = "blue";
+});
+
+//12
+const removeImg = document.querySelector("#image_two");
+removeImg.addEventListener("click", (happen) => {
+    removeImg.style.visibility = "hidden";
+
+    event.stopPropagation();
+})
+
 
 
 
